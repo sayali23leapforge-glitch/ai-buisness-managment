@@ -2,7 +2,7 @@ services:
   - type: web
     name: ai-business-management
     env: node
-    buildCommand: npm install && npm run build && cd server && npm install --production
+    buildCommand: npm install --include=dev && npm run build && cd server && npm install --production
     startCommand: cd server && node index.js
     envVars:
       - key: NODE_ENV
