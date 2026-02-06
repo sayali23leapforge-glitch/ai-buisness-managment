@@ -1,5 +1,7 @@
 # AI Business Management
 
+**Live Demo:** https://ai-buisness-managment-1.onrender.com
+
 A modern full-stack web application built with **React**, **Tailwind CSS**, and **Firebase**.
 
 ## Project Setup
