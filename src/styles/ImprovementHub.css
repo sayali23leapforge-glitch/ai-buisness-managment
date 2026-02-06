@@ -1,0 +1,192 @@
+.improvement-hub-container {
+  padding: 40px;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+  background: #0d0d0d;
+}
+
+.improvement-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.improvement-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.improvement-header p {
+  font-size: 13px;
+  color: #a0a0a0;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.improvements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.improvement-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 18px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.improvement-card:hover {
+  border-color: #555;
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.improvement-icon {
+  font-size: 28px;
+  display: block;
+  color: #999999;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.badge.pro {
+  background: #d4af37;
+  color: #000;
+}
+
+.badge.growth {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.badge.coming-soon {
+  background: rgba(107, 114, 128, 0.2);
+  color: #d1d5db;
+}
+
+.improvement-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.improvement-card p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  flex-grow: 1;
+  line-height: 1.4;
+}
+
+.improvements-footer {
+  margin-top: 40px;
+  padding: 0;
+}
+
+.upgrade-cta {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+}
+
+.upgrade-cta h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.upgrade-cta p {
+  font-size: 14px;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.upgrade-button {
+  display: inline-block;
+  background: #d4af37;
+  color: #000;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.upgrade-button:hover {
+  background: #e5c158;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .improvements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .improvement-hub-container {
+    padding: 20px;
+  }
+
+  .improvement-header h1 {
+    font-size: 24px;
+  }
+
+  .improvements-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .improvement-card {
+    min-height: auto;
+  }
+}

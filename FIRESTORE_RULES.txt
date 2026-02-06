@@ -1,0 +1,19 @@
+// FIRESTORE SECURITY RULES
+// Copy this to Firebase Console > Firestore Database > Rules tab
+// Then click "Publish"
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Allow authenticated users to read/write to teamInvites collection
+    match /teamInvites/{inviteId} {
+      allow create, read, update: if request.auth != null;
+    }
+    
+    // Allow authenticated users full access to other collections
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

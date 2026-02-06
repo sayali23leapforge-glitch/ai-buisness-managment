@@ -1,0 +1,647 @@
+/* ---------- BILLING CONTAINER ---------- */
+.billing-container {
+  padding: 30px;
+  color: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ---------- HEADER ---------- */
+.billing-header {
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 0;
+}
+
+.billing-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.billing-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 30px 0;
+}
+
+/* ---------- CONTROLS - CENTER ---------- */
+.billing-controls-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 10;
+}
+
+.currency-selector {
+  display: flex;
+  align-items: center;
+}
+
+.currency-dropdown {
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid #1f1f1f;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.currency-dropdown:hover {
+  border-color: #d4af37;
+}
+
+.currency-dropdown:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+/* ---------- BILLING TOGGLE ---------- */
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid #1f1f1f;
+  color: #888;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toggle-btn:last-child {
+  border-right: none;
+}
+
+.toggle-btn:hover {
+  color: #d4af37;
+}
+
+.toggle-btn.active {
+  background: #d4af37;
+  color: #000;
+  border-color: #d4af37;
+}
+
+.yearly-badge {
+  font-size: 11px;
+  background: #111;
+  color: #d4af37;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  border: 1px solid #1f1f1f;
+}
+
+/* ---------- PLANS GRID ---------- */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+/* ---------- PLAN CARD ---------- */
+.plan-card {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 32px 24px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+}
+
+.plan-card.popular {
+  border-color: #d4af37;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.2);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d4af37;
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- PLAN HEADER ---------- */
+.plan-header {
+  margin-bottom: 24px;
+}
+
+.plan-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 0 0;
+  color: #fff;
+}
+
+.plan-description {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  display: none;
+}
+
+/* ---------- PLAN PRICE ---------- */
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.currency {
+  font-size: 14px;
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.period {
+  font-size: 13px;
+  color: #888;
+  margin-left: 4px;
+}
+
+.plan-save-badge {
+  text-align: left;
+  color: #bdbdbd;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding: 4px 0;
+  border-radius: 0;
+  display: inline-block;
+  border: none;
+}
+
+/* ---------- PLAN BUTTON ---------- */
+.plan-button {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  order: 10;
+}
+
+.plan-button.primary {
+  background: #d4af37;
+  color: #000;
+}
+
+.plan-button.primary:hover:not(:disabled) {
+  background: #e5c158;
+  border-color: #e5c158;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.plan-button.secondary {
+  background: transparent;
+  color: #d4af37;
+}
+
+.plan-button.secondary:hover:not(:disabled) {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #e5c158;
+  color: #e5c158;
+}
+
+.plan-button.disabled {
+  background: transparent;
+  color: #d4af37;
+  border-color: #d4af37;
+  cursor: not-allowed;
+}
+
+.plan-button.disabled {
+  background: transparent;
+  color: #666;
+  border-color: #333;
+  cursor: not-allowed;
+}
+
+.plan-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- FEATURES DIVIDER ---------- */
+.features-divider {
+  height: 1px;
+  background: #1f1f1f;
+  margin: 0 0 24px 0;
+  display: none;
+}
+
+/* ---------- PLAN FEATURES ---------- */
+.plan-features {
+  flex-grow: 1;
+}
+
+.features-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+  display: none;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0;
+  font-size: 13px;
+  color: #bdbdbd;
+  line-height: 1.4;
+}
+
+.feature-icon {
+  color: #d4af37;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ---------- FAQ SECTION (Why Upgrade) ---------- */
+.billing-faq {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #1f1f1f;
+}
+
+.faq-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 32px 0;
+}
+
+.faq-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.faq-item {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: all 0.2s ease;
+  min-height: auto;
+}
+
+.faq-item:hover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.02);
+}
+
+.faq-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-content {
+  width: 100%;
+}
+
+.faq-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+
+.faq-item p {
+  font-size: 13px;
+  color: #bdbdbd;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1200px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faq-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .billing-container {
+    padding: 20px;
+  }
+
+  .billing-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discount-badge {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .plan-card {
+    padding: 20px;
+  }
+
+  .plan-name {
+    font-size: 18px;
+  }
+
+  .amount {
+    font-size: 36px;
+  }
+
+  .plan-button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .faq-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- SUCCESS MODAL ---------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.success-modal {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #d4af37;
+}
+
+.modal-checkmark {
+  margin-bottom: 20px;
+}
+
+.checkmark-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.1);
+  border: 2px solid #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #22c55e;
+  animation: scaleIn 0.5s ease-out 0.2s both;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 24px 0;
+  animation: slideDown 0.4s ease-out 0.1s both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-details {
+  background: #0d0d0d;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.modal-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 12px 0;
+  font-size: 13px;
+}
+
+.modal-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  color: #888;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.modal-message {
+  font-size: 13px;
+  color: #bdbdbd;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.modal-button {
+  width: 100%;
+  padding: 12px 20px;
+  background: #d4af37;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-button:hover {
+  background: #e5c158;
+  transform: translateY(-2px);
+}
+
+.modal-button:active {
+  transform: translateY(0);
+}
+
+.modal-footer {
+  font-size: 11px;
+  color: #666;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .success-modal {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .checkmark-circle {
+    width: 70px;
+    height: 70px;
+  }
+}
+

@@ -1,0 +1,373 @@
+/* Import Dashboard styles - use same CSS classes */
+@import url('./Dashboard.css');
+
+/* Settings specific styles */
+.settings-page {
+  padding: 0;
+  color: #ffffff;
+  background: transparent;
+}
+
+.settings-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.settings-subtitle {
+  color: #9b9b9b;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.settings-card {
+  background: #151515;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #242424;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-header p {
+  margin: 0;
+  font-size: 12px;
+  color: #9b9b9b;
+}
+
+.card-icon {
+  font-size: 16px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  background: #f1c232;
+  color: #000;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  position: relative;
+}
+
+.delete-photo-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4444;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  padding: 0;
+  min-width: 24px;
+}
+
+.delete-photo-btn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+.upload-btn {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+}
+
+.upload-btn:hover {
+  background: #242424;
+  border-color: #444;
+}
+
+.upload-hint {
+  font-size: 11px;
+  color: #777;
+  margin-left: auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-full {
+  margin-top: 12px;
+}
+
+label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 4px;
+  color: #b5b5b5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  transition: all 0.2s ease;
+  font-size: 12px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f1c232;
+  background: #1f1f1f;
+}
+
+input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Settings Options with Toggles */
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+}
+
+.option-content h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.option-content p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #9b9b9b;
+}
+
+/* Toggle Switch */
+.toggle {
+  position: relative;
+  display: inline-flex;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  border-radius: 12px;
+  transition: 0.3s;
+  padding: 0 !important;
+  border: none !important;
+  height: 24px;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #f1c232;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Full Width Export Button */
+.export-full-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #f1c232;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.export-full-btn:hover {
+  background: #242424;
+  border-color: #f1c232;
+}
+
+.export-full-btn:last-child {
+  margin-bottom: 0;
+}
+
+.export-full-btn svg {
+  color: #f1c232;
+}
+
+/* Security Button */
+.security-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #f1c232;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.security-btn:hover {
+  background: #242424;
+  border-color: #f1c232;
+}
+
+.security-btn:last-child {
+  margin-bottom: 0;
+}
+
+.security-btn svg {
+  color: #f1c232;
+}
+
+/* Action Buttons (Save/Cancel) */
+.settings-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.save-btn {
+  flex: 1;
+  background: linear-gradient(180deg, #f1c232, #d4af37);
+  border: none;
+  color: #000;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background: linear-gradient(180deg, #d4af37, #b7871a);
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cancel-btn:hover {
+  background: #1f1f1f;
+  border-color: #444;
+}
+
+.card-icon {
+  font-size: 20px;
+  color: #f1c232;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Yellow Icon Class */
+.icon-yellow {
+  color: #f1c232 !important;
+  stroke: #f1c232 !important;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .upload-hint {
+    margin-left: 0;
+  }
+}
