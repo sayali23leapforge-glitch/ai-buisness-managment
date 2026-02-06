@@ -57,22 +57,27 @@ export default function ConnectShopify({
     setStep("redirecting");
 
     try {
-      // Detect backend port first
-      let backendPort = "5000";
-      for (const port of ["4242", "5000", "3001"]) {
-        try {
-          const test = await fetch(`http://localhost:${port}/health`);
-          if (test.status !== 404) {
-            backendPort = port;
-            break;
-          }
-        } catch (e) {}
+      const apiUrl = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:4242' : window.location.origin);
+      
+      // Detect backend port first (only for localhost)
+      let backendPort = "4242";
+      if (!import.meta.env.VITE_API_URL) {
+        for (const port of ["4242", "5000", "3001"]) {
+          try {
+            const test = await fetch(`http://localhost:${port}/health`);
+            if (test.status !== 404) {
+              backendPort = port;
+              break;
+            }
+          } catch (e) {}
+        }
       }
 
       const formattedShopUrl = formatShopUrl(shopUrl);
 
+      const baseUrl = import.meta.env.VITE_API_URL || `http://localhost:${backendPort}`;
       const startResponse = await fetch(
-        `http://localhost:${backendPort}/api/shopify/oauth/start?shop=${encodeURIComponent(
+        `${baseUrl}/api/shopify/oauth/start?shop=${encodeURIComponent(
           formattedShopUrl
         )}&userId=${encodeURIComponent(user.uid)}`
       );

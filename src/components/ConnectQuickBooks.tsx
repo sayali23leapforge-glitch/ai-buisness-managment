@@ -78,7 +78,8 @@ export const ConnectQuickBooks: React.FC<ConnectQuickBooksProps> = ({
 
       // In production, exchange code for tokens via backend
       // For demo, we'll simulate the process
-      const response = await fetch("http://localhost:4242/api/quickbooks/oauth-callback", {
+      const apiUrl = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:4242' : window.location.origin);
+      const response = await fetch(`${apiUrl}/api/quickbooks/oauth-callback`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

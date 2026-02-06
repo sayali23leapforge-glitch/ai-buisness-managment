@@ -30,7 +30,7 @@ const detectBackendPort = async () => {
 // Auto-detect on module load
 detectBackendPort();
 
-const getBackendBaseUrl = () => `http://localhost:${BACKEND_PORT}`;
+const getBackendBaseUrl = () => import.meta.env.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname === 'localhost' ? `http://localhost:${BACKEND_PORT}` : typeof window !== 'undefined' ? window.location.origin : `http://localhost:${BACKEND_PORT}`);
 
 const getAuthToken = async () => {
   const user = auth.currentUser;

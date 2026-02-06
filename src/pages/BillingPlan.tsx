@@ -154,7 +154,7 @@ const BillingPlan = () => {
       // TODO: Replace with client's Stripe API keys - Uncomment real Stripe integration
       /*
       const priceId = billingCycle === "monthly" ? plan.priceIdMonthly : plan.priceIdYearly;
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:4242";
+      const apiUrl = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:4242' : window.location.origin);
 
       const response = await fetch(`${apiUrl}/create-checkout-session`, {
         method: "POST",

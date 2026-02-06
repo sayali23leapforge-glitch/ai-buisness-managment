@@ -9,7 +9,7 @@ import { getProducts } from "./localProductStore";
 
 const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY || "your-openai-api-key-here";
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-const API_BASE_URL = "http://localhost:4242"; // Shopify API on port 4242 (or 5000 if needed)
+const API_BASE_URL = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:4242' : typeof window !== 'undefined' ? window.location.origin : 'http://localhost:4242');
 
 export interface AIInsight {
   id: string;
