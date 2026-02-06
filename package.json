@@ -9,8 +9,7 @@
     "build:check": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "cd server && npm install && node index.js",
-    "postinstall": "cd server && npm install"
+    "start": "cd server && node index.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
