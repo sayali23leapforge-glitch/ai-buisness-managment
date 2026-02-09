@@ -1,3 +1,6 @@
+ 
+
+
 /**
  * Shopify Backend API Endpoints
  * NodeJS/Express backend routes for Shopify integration
@@ -19,13 +22,6 @@ const crypto = require("crypto");
 dotenv.config();
 
 const router = express.Router();
-
-// Initialize Firebase Admin (if not already done in main server)
-if (!admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.cert(process.env.FIREBASE_SERVICE_ACCOUNT_KEY || {}),
-  });
-}
 
 const db = admin.firestore();
 
